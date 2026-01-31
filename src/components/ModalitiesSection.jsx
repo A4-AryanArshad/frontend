@@ -31,39 +31,6 @@ const ModalitiesSection = () => {
     }
   ];
 
-  // Original modalities with images
-  const modalities = [
-    {
-      id: 1,
-      name: 'Somatic Movement & GYROTONIC®',
-      description: 'Nervous-system-based movement sessions integrating GYROTONIC® and Classical Pilates to restore balance and release long-held tension.',
-      type: 'In Person',
-      image: '/1.png'
-    },
-    {
-      id: 2,
-      name: 'InnerDialogue™ Sessions',
-      description:
-        "A neuro-somatic process that reveals subconscious, ancestral, and in-utero patterns held in the nervous system, allowing the soul's story to emerge.",
-      type: 'In Person or Via Zoom',
-      image: '/2.png'
-    },
-    {
-      id: 3,
-      name: 'BeingHuman Constellation Sessions',
-      description: 'Explores deeper orders of connection beyond traditional Family Constellations, addressing spiritual, energetic, and existential dimensions.',
-      type: 'In Person or Via Zoom',
-      image: '/3.png'
-    },
-    {
-      id: 4,
-      name: 'BeingHuman Constellation Card Readings',
-      description: 'A gentle, intuitive entry into the BeingHuman Constellation field using symbolic imagery to reveal hidden dynamics and soul themes.',
-      type: 'In Person or Via Zoom',
-      image: '/4.png'
-    }
-  ];
-
   const handleModalityClick = (modality) => {
     const bookingSection = document.getElementById('booking-section');
     if (bookingSection) {
