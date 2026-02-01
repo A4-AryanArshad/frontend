@@ -5,15 +5,15 @@ import './HeroSection.css';
 const HeroSection = () => {
   const navigate = useNavigate();
 
-  const scrollToBooking = () => {
-    navigate('/booking');
-  };
-
-  const scrollToBook = () => {
-    const el = document.getElementById('book');
+  const scrollToModalities = () => {
+    const el = document.getElementById('modalities');
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const scrollToBooking = () => {
+    navigate('/booking');
   };
 
   return (
@@ -24,15 +24,14 @@ const HeroSection = () => {
           <p className="hero-eyebrow">Find your path to transformation</p>
           <h1 className="hero-heading">Welcome to Spiritual Dealer</h1>
           <p className="hero-intro">
-            A sanctuary created by Pamela Shore for those seeking deeper healing, insight, and gentle
-            guidance through movement, nervous-system-based work, and intuitive practices.
+            Life is a journey of healing, growth, and discovery. Whether you&apos;re experiencing physical pain, emotional turbulence, or simply seeking deeper connection, Spiritual Dealer is your sanctuary for transformation.
           </p>
           <div className="hero-actions">
-            <button type="button" className="hero-btn primary" onClick={scrollToBooking}>
-              Book a Session
+            <button type="button" className="hero-btn primary" onClick={scrollToModalities}>
+              Explore Our Modalities
             </button>
-            <button type="button" className="hero-btn ghost" onClick={scrollToBook}>
-              Explore the Book
+            <button type="button" className="hero-btn ghost" onClick={scrollToBooking}>
+              Book a Session
             </button>
           </div>
         </div>
