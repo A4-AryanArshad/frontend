@@ -5,7 +5,6 @@ const TypingAnimation = ({ texts, speed = 80, delay = 800, pauseAfterComplete = 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
   const [isTyping, setIsTyping] = useState(true);
-  const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
     if (currentIndex >= texts.length) {
@@ -15,7 +14,6 @@ const TypingAnimation = ({ texts, speed = 80, delay = 800, pauseAfterComplete = 
         setCurrentText('');
         setCurrentIndex(0);
         setIsTyping(true);
-        setIsDeleting(false);
       }, pauseAfterComplete);
       return () => clearTimeout(restartTimeout);
     }

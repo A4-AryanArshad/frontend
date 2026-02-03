@@ -55,6 +55,11 @@
   text-decoration: none;
   transition: color 0.2s ease;
   font-weight: 400;
+  background: none;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 0;
 }
 
 .footer-nav-link:hover {
