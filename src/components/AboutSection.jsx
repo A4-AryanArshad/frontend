@@ -2,6 +2,12 @@ import React from 'react';
 import './AboutSection.css';
 
 const AboutSection = () => {
+  const scrollToSection = (sectionId) => {
+    const el = document.getElementById(sectionId);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <section className="about-section" id="about">
       <div className="container">
@@ -18,12 +24,7 @@ const AboutSection = () => {
             </div>
             <div className="about-block">
               <p>
-                Many of us move through life with a quiet sense that something is &quot;off.&quot; It may show up as physical discomfort no doctor can fully explain, emotional weight that won&apos;t lift, or a feeling of disconnection even when surrounded by others. You&apos;ve tried conventional solutions — medications, therapy, self-help — yet something still feels unresolved.
-              </p>
-            </div>
-            <div className="about-block">
-              <p>
-                We know this journey intimately because we&apos;ve walked it ourselves. Spiritual Dealer exists to bridge the gap between traditional and alternative healing — bringing together movement, energy work, subconscious healing, and spiritual insight under one roof. There is no one-size-fits-all approach to healing. Your journey is unique, and it deserves to be honored.
+                Many of us move through life with a quiet sense that something is &quot;off.&quot; It may appear as physical discomfort no doctor can fully explain, emotional weight that won&apos;t lift, or a feeling of disconnection even when surrounded by others. Traditional approaches don&apos;t always reach the root of what we&apos;re experiencing.
               </p>
             </div>
             <div className="about-empowerment">
@@ -40,22 +41,36 @@ const AboutSection = () => {
           </h3>
           <div className="about-text about-village">
             <p>
-              No single approach works for everyone.
-            </p>
-            <p>
-              Healing is deeply personal, shaped by lived experience, trauma, lineage, and the nervous system. Spiritual Dealer brings together a curated range of somatic, metaphysical, and movement-based modalities to support the whole person — body, mind, and spirit.
+              No single approach works for everyone. Healing is deeply personal and shaped by lived experience, trauma, lineage, and the nervous system. Spiritual Dealer is a community space that brings together movement-based, somatic, and intuitive healing modalities to support the whole person — body, mind, and spirit.
             </p>
             <p>
               Rather than prescribing one belief system or method, this space invites exploration, discernment, and trust in your own inner authority.
             </p>
-            <p>
-              Our practitioners don&apos;t just practice their craft — they live it. Each has been personally selected for their integrity, lived experience, and commitment to supporting others on their healing journeys.
-            </p>
           </div>
           
-          <p className="about-transition">
-            Explore the modalities that support your whole being.
-          </p>
+          <div className="about-links">
+            <button 
+              type="button" 
+              className="about-link-btn"
+              onClick={() => scrollToSection('modalities')}
+            >
+              Explore Modalities
+            </button>
+            <button 
+              type="button" 
+              className="about-link-btn"
+              onClick={() => scrollToSection('founder')}
+            >
+              Meet Pamela Shore
+            </button>
+            <button 
+              type="button" 
+              className="about-link-btn"
+              onClick={() => scrollToSection('book')}
+            >
+              The Book
+            </button>
+          </div>
         </div>
       </div>
     </section>

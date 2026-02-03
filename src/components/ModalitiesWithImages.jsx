@@ -70,3 +70,6 @@ const ModalitiesWithImages = () => {
 export default ModalitiesWithImages;
 
 
+
+
+

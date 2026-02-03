@@ -3,6 +3,9 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './pages/Home';
 import BookingPage from './pages/BookingPage';
+import PamelaShorePage from './pages/PamelaShorePage';
+import BookPage from './pages/BookPage';
+import ServicesPage from './pages/ServicesPage';
 import AdminLogin from './admin/AdminLogin';
 import AdminDashboard from './admin/AdminDashboard';
 
@@ -13,6 +16,9 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/pamelashore" element={<PamelaShorePage />} />
+        <Route path="/book" element={<BookPage />} />
+        <Route path="/services" element={<ServicesPage />} />
         <Route path="/booking" element={<BookingPage />} />
         <Route
           path="/admin"

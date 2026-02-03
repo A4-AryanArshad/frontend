@@ -57,6 +57,16 @@
   display: none;
 }
 
+.header-coming-soon {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.header-coming-soon::after {
+  display: none;
+}
+
 .header-links a::after {
   content: '';
   position: absolute;

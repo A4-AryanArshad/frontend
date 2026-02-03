@@ -1,9 +1,7 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import './HeroSection.css';
 
 const HeroSection = () => {
-  const navigate = useNavigate();
 
   const scrollToModalities = () => {
     const el = document.getElementById('modalities');
@@ -12,8 +10,11 @@ const HeroSection = () => {
     }
   };
 
-  const scrollToBooking = () => {
-    navigate('/booking');
+  const scrollToFounder = () => {
+    const el = document.getElementById('founder');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -24,14 +25,14 @@ const HeroSection = () => {
           <p className="hero-eyebrow">Find your path to transformation</p>
           <h1 className="hero-heading">Welcome to Spiritual Dealer</h1>
           <p className="hero-intro">
-            Life is a journey of healing, growth, and discovery. Whether you&apos;re experiencing physical pain, emotional turbulence, or simply seeking deeper connection, Spiritual Dealer is your sanctuary for transformation.
+            Life is a journey of healing, growth, and discovery. Whether you&apos;re experiencing physical pain, emotional turbulence, or a sense that something is missing, Spiritual Dealer exists to help you find your path to transformation.
           </p>
           <div className="hero-actions">
             <button type="button" className="hero-btn primary" onClick={scrollToModalities}>
-              Explore Our Modalities
+              Explore Modalities
             </button>
-            <button type="button" className="hero-btn ghost" onClick={scrollToBooking}>
-              Book a Session
+            <button type="button" className="hero-btn ghost" onClick={scrollToFounder}>
+              Pamela Shore
             </button>
           </div>
         </div>

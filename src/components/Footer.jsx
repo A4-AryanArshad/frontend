@@ -29,23 +29,16 @@ const Footer = () => {
           <a href={location.pathname !== '/' ? "/#top" : "#top"} onClick={(e) => location.pathname === '/' && handleScroll(e, 'top')} className="footer-nav-link">
             Home
           </a>
-          <a href={location.pathname !== '/' ? "/#about" : "#about"} onClick={(e) => location.pathname === '/' && handleScroll(e, 'about')} className="footer-nav-link">
-            About
-          </a>
-          <a href={location.pathname !== '/' ? "/#modalities" : "#modalities"} onClick={(e) => location.pathname === '/' && handleScroll(e, 'modalities')} className="footer-nav-link">
-            Modalities
-          </a>
-          <a href={location.pathname !== '/' ? "/#book" : "#book"} onClick={(e) => location.pathname === '/' && handleScroll(e, 'book')} className="footer-nav-link">
-            The Book
-          </a>
-          <Link to="/booking" className="footer-nav-link">Book a Session</Link>
-          <a
-            href="https://www.spiritualdealer.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="footer-nav-link"
+          <Link to="/pamelashore" className="footer-nav-link">Pamela Shore</Link>
+          <Link to="/book" className="footer-nav-link">The Book</Link>
+          <Link to="/services" className="footer-nav-link">Modalities</Link>
+          <a 
+            href="#" 
+            className="footer-nav-link footer-coming-soon"
+            onClick={(e) => e.preventDefault()}
+            title="Coming Soon"
           >
-            Visit SpiritualDealer.com
+            Community
           </a>
         </nav>
       </div>

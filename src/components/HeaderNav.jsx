@@ -37,29 +37,44 @@ const HeaderNav = () => {
           </Link>
         </div>
         <nav className={`header-links ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}>
-          <a href={isBookingPage ? "/#top" : "#top"} onClick={(e) => {
-            if (!isBookingPage) handleScroll(e, 'top');
-            else handleLinkClick();
-          }}>
+          <Link
+            to="/"
+            className={location.pathname === '/' ? 'active' : ''}
+            onClick={handleLinkClick}
+          >
             Home
-          </a>
-          <a href={isBookingPage ? "/#about" : "#about"} onClick={(e) => {
-            if (!isBookingPage) handleScroll(e, 'about');
-            else handleLinkClick();
-          }}>
-            About
-          </a>
-          <a href={isBookingPage ? "/#modalities" : "#modalities"} onClick={(e) => {
-            if (!isBookingPage) handleScroll(e, 'modalities');
-            else handleLinkClick();
-          }}>
-            Modalities
-          </a>
-          <a href={isBookingPage ? "/#book" : "#book"} onClick={(e) => {
-            if (!isBookingPage) handleScroll(e, 'book');
-            else handleLinkClick();
-          }}>
+          </Link>
+          <Link
+            to="/pamelashore"
+            className={location.pathname === '/pamelashore' ? 'active' : ''}
+            onClick={handleLinkClick}
+          >
+            Pamela Shore
+          </Link>
+          <Link
+            to="/services"
+            className={location.pathname === '/services' ? 'active' : ''}
+            onClick={handleLinkClick}
+          >
+            Services
+          </Link>
+          <Link 
+            to="/book" 
+            className={location.pathname === '/book' ? 'active' : ''} 
+            onClick={handleLinkClick}
+          >
             The Book
+          </Link>
+          <a 
+            href="#" 
+            className="header-coming-soon" 
+            onClick={(e) => {
+              e.preventDefault();
+              handleLinkClick();
+            }}
+            title="Coming Soon"
+          >
+            Community
           </a>
           <Link to="/booking" className={isBookingPage ? 'active' : ''} onClick={handleLinkClick}>
             Book a Session
