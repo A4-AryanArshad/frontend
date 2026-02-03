@@ -7,19 +7,6 @@ const HeaderNav = () => {
   const isBookingPage = location.pathname === '/booking';
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const handleScroll = (e, targetId) => {
-    e.preventDefault();
-    setIsMobileMenuOpen(false); // Close mobile menu when link is clicked
-    if (location.pathname !== '/') {
-      window.location.href = `/#${targetId}`;
-      return;
-    }
-    const el = document.getElementById(targetId);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   const handleLinkClick = () => {
     setIsMobileMenuOpen(false); // Close mobile menu when link is clicked
   };
@@ -65,23 +52,21 @@ const HeaderNav = () => {
           >
             The Book
           </Link>
-          <a 
-            href="#" 
-            className="header-coming-soon" 
-            onClick={(e) => {
-              e.preventDefault();
-              handleLinkClick();
-            }}
+          <button
+            type="button"
+            className="header-coming-soon"
+            onClick={handleLinkClick}
             title="Coming Soon"
+            aria-label="Community (Coming Soon)"
           >
             Community
-          </a>
+          </button>
           <Link to="/booking" className={isBookingPage ? 'active' : ''} onClick={handleLinkClick}>
             Book a Session
           </Link>
-          <a href="/admin/login" className="header-admin-link" onClick={handleLinkClick}>
+          <Link to="/admin/login" className="header-admin-link" onClick={handleLinkClick}>
             Admin Login
-          </a>
+          </Link>
         </nav>
         <button 
           className="mobile-menu-toggle"

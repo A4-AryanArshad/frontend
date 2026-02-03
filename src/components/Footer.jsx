@@ -32,14 +32,15 @@ const Footer = () => {
           <Link to="/pamelashore" className="footer-nav-link">Pamela Shore</Link>
           <Link to="/book" className="footer-nav-link">The Book</Link>
           <Link to="/services" className="footer-nav-link">Modalities</Link>
-          <a 
-            href="#" 
+          <button
+            type="button"
             className="footer-nav-link footer-coming-soon"
             onClick={(e) => e.preventDefault()}
             title="Coming Soon"
+            aria-label="Community (Coming Soon)"
           >
             Community
-          </a>
+          </button>
         </nav>
       </div>
     </footer>
